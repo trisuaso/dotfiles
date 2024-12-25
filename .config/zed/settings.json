@@ -1,0 +1,97 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "features": {
+    "inline_completion_provider": "none"
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 14,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Min Dark"
+  },
+  "ui_font_family": "Poppins",
+  "ui_font_features": {
+    "ligatures": true
+  },
+  "buffer_font_family": "JetBrains Mono",
+  "buffer_font_features": {
+    "ligatures": true
+  },
+  "tab_size": 4,
+  "git": {
+    "git_gutter": "tracked_files",
+    "inline_blame": {
+      "enabled": false
+    }
+  },
+  "wrap_guides": [
+    80
+  ],
+  "base_keymap": "Atom",
+  "telemetry": {
+    "enabled": false
+  },
+  "experimental.theme_overrides": {
+    "background": "#1a1a1a",
+    "title_bar.background": "#1a1a1a",
+    "status_bar.background": "#1a1a1a",
+    "editor.document_highlight.bracket_background": "#333333",
+    "editor.active_line.background": "#262626",
+    "editor.wrap_guide": "#262626",
+    "ghost_element.hover": "#262626",
+    "ghost_element.selected": "#333333",
+    "ghost_element.active": "#333333",
+    "border": "#262626",
+    "border.variant": "#262626",
+    "editor.foreground": "#76afdb",
+    "color": {
+      "error.background": "#1a1a1a",
+      "info.background": "#1a1a1a",
+      "warning.background": "#1a1a1a"
+    },
+    "syntax": {
+      "operator": {
+        "color": "#e69875"
+      },
+      "type": {
+        "color": "#dbbc7f"
+      },
+      "type.builtin": {
+        "color": "#dbbc7f"
+      },
+      "constructor": {
+        "color": "#dbbc7f"
+      },
+      "function": {
+        "color": "#a7c080"
+      },
+      "variable": {
+        "color": "#76afdb"
+      },
+      "variable.special": {
+        "color": "#d88ffc",
+        "font_style": "italic"
+      },
+      "number": {
+        "color": "#d88ffc"
+      },
+      "property": {
+        "color": "#76afdb"
+      },
+      "string": {
+        "color": "#83c092"
+      },
+      "punctuation.special": {
+        "color": "#e69875"
+      }
+    }
+  }
+}
