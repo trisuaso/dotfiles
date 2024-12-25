@@ -1,0 +1,37 @@
+theme = "kaolin-dark" # snazzy sometimes
+
+[editor]
+line-number = "relative"
+bufferline = "multiple"
+rulers = [80]
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+
+[editor.file-picker]
+hidden = true
+
+[editor.statusline]
+left = ["mode", "spinner", "file-name", "file-modification-indicator", "read-only-indicator"]
+right = ["diagnostics", "position", "file-type", "file-encoding"]
+mode.normal = "-"
+mode.insert = ">"
+mode.select = "#"
+
+[editor.whitespace.render]
+space = "none"
+newline = "none"
+
+[editor.lsp]
+display-messages = true
+
+[keys.normal]
+# C-c = ":buffer-close"
+C-c = ":clipboard-yank"
+C-v = ":clipboard-paste-after"
+C-g = ":run-shell-command gitk"
+C-z = ":earlier"
+C-y = ":later"
+S-down = [ "extend_to_line_bounds", "delete_selection", "paste_after" ]
+S-up = [ "extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before" ]
