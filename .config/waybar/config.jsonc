@@ -10,18 +10,15 @@
     "position": "top",
     "height": 27,
     "modules-left": [
-      "sway/workspaces",
-      "sway/mode",
-      "sway/window"
-    ],
-    "modules-center": [],
-    "modules-right": [
       "network",
-      "temperature",
-      "backlight",
       "pulseaudio",
+      "keyboard-state"
+    ],
+    "modules-center": ["clock"],
+    "modules-right": [
+      "cpu",
+      "memory",
       "battery",
-      "clock",
       "tray"
     ],
     "sway/workspaces": {
@@ -36,7 +33,7 @@
       "spacing": 15
     },
     "clock": {
-      "format": "{:%a %b %e  %R}",
+      "format": " {:%a %b %e  %R}",
       "interval": 30
     },
     "battery": {
@@ -59,6 +56,22 @@
         ""
       ],
       "interval": 30
+    },
+    "keyboard-state": {
+        "numlock": true,
+        "capslock": true,
+        "format": "{name} {icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{}% "
     },
     "network": {
       "interface": "wlan0",
@@ -95,28 +108,24 @@
       ],
       "interval": 30
     },
-    "backlight": {
-      "device": "intel_backlight",
-      "format": "{icon}  {percent}%  ",
-      "format-icons": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "interval": 60
-    },
     "pulseaudio": {
-      "format": "{icon}  {volume}%  ",
-      "format-bluetooth": "  {volume}%  ",
-      "format-muted": "婢  Mute  ",
-      "interval": 60,
-      "format-icons": {
-        "default": [
-          ""
-        ]
-      },
-      "on-click": "pavucontrol"
-    }
+        // "scroll-step": 1, // %, can be a float
+        "format": "{icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}%",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [""]
+        },
+        "on-click": "pavucontrol"
+    },
   }
 ]
