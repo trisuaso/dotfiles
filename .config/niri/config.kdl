@@ -5,7 +5,7 @@
 
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "mako"
-spawn-at-startup "swaybg"
+spawn-at-startup "swaybg" "-i" "/home/hkau/.local/share/PrismLauncher/instances/edge/minecraft/screenshots/2025-03-03_20.26.34.png"
 spawn-at-startup "waybar"
 spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
 
@@ -112,7 +112,7 @@ output "DP-2" {
 }
 
 window-rule {
-    geometry-corner-radius 4
+    geometry-corner-radius 2
 
     tab-indicator {
         active-color "#b7bdf8"
@@ -173,7 +173,7 @@ layout {
         // off
 
         // How many logical pixels the ring extends out from the windows.
-        width 4
+        width 2
 
         // Colors can be set in a variety of ways:
         // - CSS named colors: "red"
@@ -208,7 +208,7 @@ layout {
         // If you enable the border, you probably want to disable the focus ring.
         off
 
-        width 4
+        width 2
         active-color "#b7bdf8"
         inactive-color "#585b77"
 
